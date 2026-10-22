@@ -1,0 +1,21 @@
+# ==============================================================================
+# INTEGRIX IX.VOICE - DOCKER COMPOSE LOCAL DEV OVERRIDE EXAMPLE
+# ==============================================================================
+# Usage:
+#   cp docker-compose.override.yml.example docker-compose.override.yml
+#
+# This file mounts local host folders into the containers for live code reload.
+# ==============================================================================
+
+services:
+  backend:
+    volumes:
+      - ./backend/app:/app/app
+      - ./contracts:/app/contracts
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+  worker:
+    volumes:
+      - ./backend/app:/app/app
+      - ./contracts:/app/contracts
+    command: ["watchmedo", "auto-restart", "--directory=./app", "--pattern=*.py", "--recursive", "--", "celery", "-A", "app.core.celery_app", "worker", "--loglevel=info"]

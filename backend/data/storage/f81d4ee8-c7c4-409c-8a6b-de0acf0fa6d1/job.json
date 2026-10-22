@@ -1,0 +1,17 @@
+{
+  "jobId": "f81d4ee8-c7c4-409c-8a6b-de0acf0fa6d1",
+  "status": "COMPLETED",
+  "progress": 100,
+  "audioMetadata": {
+    "filename": "sample.wav",
+    "fileSize": 100,
+    "format": "audio/wav",
+    "durationMs": null,
+    "sampleRate": 16000,
+    "channels": 1
+  },
+  "traceId": "trace-3e1d5d381551",
+  "errors": [],
+  "createdAt": "2026-10-22T03:15:11.649312+00:00",
+  "updatedAt": "2026-10-22T03:15:11.682896+00:00"
+}

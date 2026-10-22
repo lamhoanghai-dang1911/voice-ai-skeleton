@@ -1,0 +1,50 @@
+# ==========================================
+# INTEGRIX IX.VOICE - DOCKER IGNORE
+# ==========================================
+
+**/.git
+**/.gitignore
+**/.github
+**/.vscode
+**/.idea
+
+# Secrets and environment files
+**/.env
+**/.env.*
+!**/.env.example
+**/secrets
+**/credentials
+
+# Python cache & venv
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache
+**/.coverage
+**/htmlcov
+**/.venv
+**/venv
+**/env
+
+# Node & Frontend
+**/node_modules
+**/dist
+**/npm-debug.log
+
+# Audio and model data (mount via volume instead)
+**/data/audio
+**/data/storage
+**/data/models
+**/*.pt
+**/*.pth
+**/*.safetensors
+**/*.bin
+
+# Documentation and temporary files
+**/docs
+**/*.md
+!**/README.md
+**/tmp
+**/temp
+**/*.log
